@@ -135,12 +135,23 @@ app.get("/app/flips/:number", (req, res) => {
     return res.status(200).json({ "raw": flipResults, "summary": summary })
 })
 
+app.post("/app/flips/coins/", (req, res) => {
+    var numFlips = req.body.number
+    var flipResults = coinFlips(numFlips)
+    var summary = countFlips(flipResults)
+    return res.status(200).json({ "raw": flipResults, "summary": summary })
+})
+
 app.get("/app/flip/call/heads", (req, res) => {
     return res.status(200).json(flipACoin("heads"))
 })
 
 app.get("/app/flip/call/tails", (req, res) => {
     return res.status(200).json(flipACoin("tails"))
+})
+
+app.post("/app/flip/call/", (req, res) => {
+    return res.status(200).json(flipACoin(req.body.guess))
 })
 app.use(function (req, res) {
     res.status(404).send("404 NOT FOUND")
