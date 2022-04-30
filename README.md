@@ -1,20 +1,3 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7635211&assignment_repo_type=AssignmentRepo)
-# a05 Human Interface
-
-In this assignment, you will build an HTML human interface for your API. You will also document your API endpoints and consider package structure.
-
-## DO NOT CLONE THIS REPOSITORY DIRECTLY
-
-Use the GitHub classroom link instead: https://classroom.github.com/a/PUVGxeMe
-
-If you clone this repo directly, it will not be added to the organization as an individual repo associated with your account and you will not be able to push to it.
-
-## Instructions
-
-Full instructions for this assignment are available at: https://comp426.johndmart.in/a/05/
-
-<!-- DELETE EVERYTHING ABOVE THIS LINE -->
-
 # Coinserver Description
 
 This package exposes endpoints and provides a web interface to emulate random chance coin flip events in the following ways:
@@ -133,45 +116,18 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 ```
 
-### /app/flip/coin/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-HTTP/1.1 200 OK
-X-Powered-By: Express
-Content-Type: application/json; charset=utf-8
-Content-Length: 35
-ETag: W/"23-KNmhzXgQhtEE5ovS3fuLixylNK0"
-Date: Thu, 07 Apr 2022 15:07:49 GMT
-Connection: keep-alive
-Keep-Alive: timeout=5
-```
-
 ### /app/flip/call/:guess/ (GET)
 
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/flip/call/heads'
 ```
 
 #### Response body
 
 ```
-
+{"call":"heads","flip":"heads","result":"win"}
 ```
 
 #### Response headers
@@ -246,13 +202,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/log/access'
 ```
 
 #### Response body
 
 ```
-
+[{"id":1,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245423.0","method":"GET","url":"/","protocol":"http","httpversion":"1.1","status":"200.0","referer":null,"useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":2,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245446.0","method":"GET","url":"/style.css","protocol":"http","httpversion":"1.1","status":"200.0","referer":"http://127.0.0.1:200/","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":3,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245448.0","method":"GET","url":"/main.js","protocol":"http","httpversion":"1.1","status":"200.0","referer":"http://127.0.0.1:200/","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":4,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245561.0","method":"GET","url":"/assets/favicon/android-icon-192x192.png","protocol":"http","httpversion":"1.1","status":"200.0","referer":"http://127.0.0.1:200/","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":5,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245684.0","method":"GET","url":"/assets/favicon/manifest.json","protocol":"http","httpversion":"1.1","status":"200.0","referer":"http://127.0.0.1:200/","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":6,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296245687.0","method":"GET","url":"/assets/favicon/favicon-32x32.png","protocol":"http","httpversion":"1.1","status":"200.0","referer":"http://127.0.0.1:200/","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":7,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296482621.0","method":"GET","url":"/app/flip","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":8,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651296551659.0","method":"GET","url":"/app/flip","protocol":"http","httpversion":"1.1","status":"200.0","referer":null,"useragent":"curl/7.79.1"},{"id":9,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300373442.0","method":"GET","url":"/flips/1","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":10,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300393414.0","method":"GET","url":"/appflips/1","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":11,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300394125.0","method":"GET","url":"/app/flips/1","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":12,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300413004.0","method":"GET","url":"/app/flips/4","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":13,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300441009.0","method":"GET","url":"/app/flips/coin","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":14,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300450906.0","method":"GET","url":"/app/flips/call/","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":15,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300455563.0","method":"GET","url":"/app/flips/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":16,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300456356.0","method":"GET","url":"/app/flips/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":17,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300459530.0","method":"GET","url":"/app/flips/call/head","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":18,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300460152.0","method":"GET","url":"/app/flips/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":19,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300461763.0","method":"GET","url":"/app/flips/call/tails","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":20,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300462733.0","method":"GET","url":"/app/flips/call/tail","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":21,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300481356.0","method":"GET","url":"/app/flip/call/tail","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":22,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300482126.0","method":"GET","url":"/app/flip/call/tail","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":23,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300502981.0","method":"POST","url":"/app/flip/call/tail","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":24,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300516393.0","method":"GET","url":"/app/flip/call/tail","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":25,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300552037.0","method":"GET","url":"/app/flip/call/tails","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":26,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300552833.0","method":"GET","url":"/app/flip/call/tails","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":27,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300560688.0","method":"GET","url":"/app/flip/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":28,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300562033.0","method":"GET","url":"/app/flip/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":29,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300731078.0","method":"GET","url":"/app/flip/coins.","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":30,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300731885.0","method":"GET","url":"/app/flip/coins/","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":31,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651300732348.0","method":"GET","url":"/app/flip/coins/","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":32,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651301154540.0","method":"GET","url":"/app/flip/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":33,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651301158470.0","method":"GET","url":"/app/flip/call/heads","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"},{"id":34,"remoteaddr":"::ffff:127.0.0.1","remoteuser":null,"time":"1651301198370.0","method":"GET","url":"/app/log/access","protocol":"http","httpversion":"1.1","status":"200.0","referer":"https://cs.cc.unc.edu/psc/campus/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_BROWSE_CATLG_P.GBL?ICType=Panel&ICElementNum=0&ICStateNum=52&ICResubmit=1&ICAJAX=1&","useragent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"}]
 ```
 
 #### Response headers
@@ -268,32 +224,6 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 ```
 
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
-```
-
-#### Response headers
-
-```
-HTTP/1.1 200 OK
-X-Powered-By: Express
-Content-Type: application/json; charset=utf-8
-Content-Length: 35
-ETag: W/"23-KNmhzXgQhtEE5ovS3fuLixylNK0"
-Date: Thu, 07 Apr 2022 15:07:49 GMT
-Connection: keep-alive
-Keep-Alive: timeout=5
-```
 
 ### /app/log/error/ (GET)
 
@@ -302,13 +232,13 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/log/error'
 ```
 
 #### Response body
 
 ```
-
+Error: Error test successful.
 ```
 
 #### Response headers
@@ -331,13 +261,13 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/user/login/'
 ```
 
 #### Response body
 
 ```
-
+{"message" : "User successfully logged in!, "success" true}
 ```
 
 #### Response headers
@@ -360,13 +290,13 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/user/new/'
 ```
 
 #### Response body
 
 ```
-
+{"message": "User successfully created!", success: true}
 ```
 
 #### Response headers
@@ -389,13 +319,13 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/user/update/'
 ```
 
 #### Response body
 
 ```
-
+{message: "User successfully updated!", success: true}
 ```
 
 #### Response headers
@@ -418,13 +348,13 @@ _Not yet implemented_
 #### Request cURL
 
 ```
-
+curl --location --request GET 'http://127.0.0.1:5000/app/user/delete/'
 ```
 
 #### Response body
 
 ```
-
+{message: "User successfully deleted!", success: true}
 ```
 
 #### Response headers
