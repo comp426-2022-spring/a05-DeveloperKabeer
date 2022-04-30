@@ -1,6 +1,5 @@
-const cors = require("cors")
-app.use(cors())
 // Focus div based on nav button click
+
 
 // Flip one coin and show coin image to match result when button clicked
 
