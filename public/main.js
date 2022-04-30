@@ -7,5 +7,3 @@
 // Enter number and press button to activate coin flip series
 
 // Guess a flip by clicking either heads or tails button//
-/a//
-//efsef//i/
